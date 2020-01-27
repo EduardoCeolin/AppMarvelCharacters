@@ -1,10 +1,9 @@
-package com.app.appmarvelcharacters.Activities
+package com.app.appmarvelcharacters.ui.activities
 
 import android.content.Intent
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
-import com.app.appmarvelcharacters.MainActivity
+import androidx.appcompat.app.AppCompatActivity
 import com.app.appmarvelcharacters.R
 
 class SplashScreenActivity : AppCompatActivity() {
@@ -14,7 +13,7 @@ class SplashScreenActivity : AppCompatActivity() {
         setContentView(R.layout.activity_splash_screen)
 
         Handler().postDelayed({
-            startActivity(Intent(this, MainActivity::class.java))
+            startActivity(Intent(this, ListHeroesActivity::class.java))
             finish()
         },1000)
     }
